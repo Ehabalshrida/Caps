@@ -2,7 +2,7 @@
   "name": "Caps",
   "version": "1.0.0",
   "description": "",
-  "main": "caps.js",
+  "main": "events.js",
   "scripts": {
     "test": "jest"
   },
@@ -21,6 +21,8 @@
     "dotenv": "^10.0.0",
     "faker": "^5.5.3",
     "jest": "^27.3.1",
+    "socket.io": "^4.3.2",
+    "socket.io-client": "^4.3.2",
     "supertest": "^6.1.6"
   }
 }
