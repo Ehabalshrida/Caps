@@ -1,20 +1,24 @@
 "use strict";
 
-const events = require('./events');
+require('dotenv').config();
+const io=require('socket.io-client');
+const HOST=process.env.HOST || 'http://localhost:8000';
+const socket=io.connect(`${HOST}/caps`);
 
-events.on('driverPickup', payload=>{
+
+
+socket.on('driverPickup', payload=>{
     setTimeout(()=>{
-        console.log(`DRIVER: picked up ${payload.orderID}`);
-        events.emit('transit',payload);
-    },1000);
+        console.log(`DRIVER: picked up ${payload.orderId}`);
+        socket.emit('transit',payload);
+    },5000);
 });
 
 
-events.on('driverTransit',payload=>{
+socket.on('driverTransit',payload=>{
     setTimeout(()=>{
-        console.log(`DRIVER: delivered  up ${payload.orderID}`);
-        events.emit('vendorDileverd',payload);
+        console.log(`DRIVER: delivered  up ${payload.orderId}`);
+        socket.emit('deleverd',payload);
+        
     },3000)
 });
-
-
