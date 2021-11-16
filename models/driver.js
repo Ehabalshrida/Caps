@@ -14,7 +14,7 @@ socket.on('driverPickup', msg=>{
     },5000);
 });
 
-
+//
 socket.on('driverTransit',msg=>{
     setTimeout(()=>{
         console.log(`DRIVER: delivered  up ${msg.id}`);
