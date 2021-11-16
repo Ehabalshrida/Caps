@@ -18,13 +18,13 @@
 
 ## The output of running the app 
 
-![Run1](./out1.PNG)
-![Run2](./out2.PNG)
-![Run3](./out3.PNG)
+![Run1](./out11.PNG)
+![Run2](./out22.PNG)
+![Run3](./out33.PNG)
 
 ## The output of running the test files
 
-![test](./testlab12.PNG)
+![test](./testlab13.PNG)
 
 ## UML 
 
